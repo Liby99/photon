@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 12px;
+}
+
+main {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+.lr,
+.tb {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.lr > .pane,
+.tb > .pane {
+  flex-grow: 1;
+}
+
+.lr > .pane {
+  height: 100%;
+}
+
+.tb > .pane {
+  width: 100%;
+}
+
+.lr {
+  flex-direction: row;
+}
+
+.tb {
+  flex-direction: column;
+}
+
+.lr > .div,
+.tb > .div {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.lr > .div {
+  height: 100%;
+  width: 1px;
+}
+
+.tb > .div {
+  width: 100%;
+  height: 1px;
+}
+
+.view {
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.view:hover {
+  border: 1px solid rgba(0, 0, 255, 1);
+}
+
+.view-header {
+  height: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  border-bottom: 2px solid rgb(80, 28, 28);
+}
+
+.view-title {
+  display: block;
+  padding: 0 10px;
+  line-height: 28px;
+}
+
+.view-content {
+  flex-grow: 1;
+}
