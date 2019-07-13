@@ -11,7 +11,7 @@
             <span class="view-title">Scene</span>
           </div>
           <div class="view-content">
-            <canvas class="scene-canvas" width="400px" height="500px"></canvas>
+            <canvas id="scene-canvas-1" class="scene-canvas" width="400px" height="500px"></canvas>
           </div>
         </div>
       </div>
@@ -28,5 +28,14 @@
         </div>
       </div>
     </main>
+    <script>
+      const Live = require('../photon_live');
+      const canvas = document.getElementById('scene-canvas-1');
+      const context = canvas.getContext('2d');
+      const img = context.createImageData(400, 500);
+      const imgData = img.data;
+      Live.fill(imgData, 0, 0, 400, 500, [255, 0, 0]);
+      context.putImageData(img, 0, 0);
+    </script>
   </body>
 </html>
